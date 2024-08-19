@@ -4,10 +4,10 @@ import { ProductsScreen } from '../screens/products/ProductsScreen';
 import { SettingsScreen } from '../screens/settings/SettingsScreen';
 import { ProductScreen } from '../screens/products/ProductScreen';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParams>();
 export type RootStackParams = {
   Home: undefined,
-  Product: undefined,
+  Product: {id: number, name: string},
   Products: undefined,
   Settings: undefined
 }
